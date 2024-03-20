@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 # Ruta a la carpeta que contiene tus carpetas con archivos .pt
-embeddings_folder = 'curated_dataset/example_embeddings_esm2'
+embeddings_folder = 'curated_dataset/example_embeddings_esm2_reduced_input'
 
 # Ruta a tu archivo CSV con los scores de conservación
 conservation_scores_file = 'ruta_a_tu_archivo_de_scores.csv'
@@ -28,7 +28,7 @@ for folder in embedding_subfolders:
     print("embeddings_list", embeddings_list)
 
 
-# Concatenar los embeddings en un solo DataFrame
+""" # Concatenar los embeddings en un solo DataFrame
 embeddings_df = pd.concat(embeddings_list, ignore_index=True)
 print("embeddings_df", embeddings_df)
 
@@ -100,3 +100,4 @@ with torch.no_grad():
     test_outputs = model(X_test_tensor)
     test_loss = criterion(test_outputs, y_test_tensor)
     print(f'Final Test Loss: {test_loss.item():.4f}')
+ """

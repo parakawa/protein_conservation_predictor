@@ -13,3 +13,5 @@ esm-extract esm2_t33_650M_UR50D curated_dataset/sequences.fasta curated_dataset/
 esm-extract esm2_t6_8M_UR50D curated_dataset/sequences.fasta curated_dataset/example_embeddings_esm2 --repr_layers 0 5 6 --include mean per_tok
 
 esm-extract esm2_t6_8M_UR50D sample_data/sequences.fasta sample_data/example_embeddings_esm2 --repr_layers 0 5 6 --include mean per_tok
+
+esm-extract esm2_t6_8M_UR50D curated_dataset/reduced_input.fasta curated_dataset/example_embeddings_esm2_reduced_input --repr_layers 0 5 6 --include mean per_tok

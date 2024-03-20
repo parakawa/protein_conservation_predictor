@@ -38,9 +38,9 @@ def reduce_data(fasta_file, csv_file, reduced_amount, reduced_fasta_file, reduce
 
 
 # Example usage
-reduce_data("curated_dataset/sequences.fasta", "curated_dataset/conservation_scores_formated.csv", 1000,
-            "curated_dataset/reduced_input.fasta", "curated_dataset/reduced_input.csv")
+# reduce_data("curated_dataset/sequences.fasta", "curated_dataset/conservation_scores_formated.csv", 1000,"curated_dataset/reduced_input.fasta", "curated_dataset/reduced_input.csv")
 
+# esm-extract esm2_t6_8M_UR50D curated_dataset/reduced_input.fasta curated_dataset/example_embeddings_esm2_reduced_input --repr_layers 0 5 6 --include mean per_tok
 
 def get_embeddings_vectors(folder_path):
 
@@ -62,5 +62,5 @@ def get_embeddings_vectors(folder_path):
     return vectors
 
 
-# vectors = get_embeddings_vectors('sample_data/example_embeddings_esm2')
-# print("vectors", vectors)
+vectors = get_embeddings_vectors('sample_data/example_embeddings_esm2')
+print("vectors", vectors)
